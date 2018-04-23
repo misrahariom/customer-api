@@ -4,7 +4,7 @@ This dockerized api is created using springboot , gradle and mongodb.
 
 Endpoints:
 
-GET:
+*GET:*
 
  1) /age?age=<age>
  2) /id?customerId=<customerId>
@@ -15,12 +15,13 @@ GET:
  7) /email?email=<emailid>
 
 
-POST:
+*POST:*
 
-   /addcustomer 
+   > /addcustomer 
    
    Requestbody: 
-      {
+    ```
+    {
        "customerId": 2,
        "firstName": "Neeraj",
        "lastName": "Agarwal",
@@ -41,26 +42,28 @@ POST:
        "gender":"male",
        "work":"Sapient Mns"
        }
+       ```
 
+*PUT:*
 
-PUT:
-
-  /updatecustomer
+  > /updatecustomer
   
-  Requestbody:  Same as above.
+  Requestbody:  Same json as above ( give only things thats need update).
   
-  finds customer with below order:
+  finds customer with below order and updates the value as per  given json:
   
   firstName > lastname >gender > work > age
    
 
-DELETE:
+*DELETE:*
 
 
-  /deletecustomer
+  > /deletecustomer
   
   RequestBody:
-    {
+   ```
+   {
       "customerId": 6	
-    }
+   } 
+  
 
