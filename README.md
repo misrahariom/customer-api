@@ -13,40 +13,52 @@ GET:
  5) /lastname?lastName=<Lastname>
  6) /test ( to check if api is working)
  7) /email?email=<emailid>
-  
+
+
 POST:
+
    /addcustomer 
- Requestbody: 
-    {
-     "customerId": 2,
-     "firstName": "Neeraj",
-     "lastName": "Agarwal",
-     "age": 24,
-     "memberships": ["club1","club2"],
-     "address": {
-     "addressLine1":"409",
-     "addressLine2": "Drayton hayes",
-     "city": "London",
-     "zipcode":"UB3 4FL"
-     },
-     "email":"nagarwal16@sapient.com",
-     "contacts": [
-     {"name": "Balram","mobile": "123456789","relation":"friend"},
-     {"name": "Sugnadha","mobile": "1234567","relation":"friend"},
-     {"name": "Rahul","mobile": "123456","relation":"friend"}
-     ],
-     "gender":"male",
-     "work":"Sapient Mns"
-     }
+   
+   Requestbody: 
+      {
+       "customerId": 2,
+       "firstName": "Neeraj",
+       "lastName": "Agarwal",
+       "age": 24,
+       "memberships": ["club1","club2"],
+       "address": {
+       "addressLine1":"409",
+       "addressLine2": "Drayton hayes",
+       "city": "London",
+       "zipcode":"UB3 4FL"
+       },
+       "email":"nagarwal16@sapient.com",
+       "contacts": [
+       {"name": "Balram","mobile": "123456789","relation":"friend"},
+       {"name": "Sugnadha","mobile": "1234567","relation":"friend"},
+       {"name": "Rahul","mobile": "123456","relation":"friend"}
+       ],
+       "gender":"male",
+       "work":"Sapient Mns"
+       }
+
 
 PUT:
+
   /updatecustomer
   
   Requestbody:  Same as above.
+  
   finds customer with below order:
+  
   firstName > lastname >gender > work > age
+   
+
 DELETE:
+
+
   /deletecustomer
+  
   RequestBody:
     {
       "customerId": 6	
