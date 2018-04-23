@@ -22,7 +22,7 @@ Endpoints:
    Requestbody: 
    
    
-    ```
+   
     {
        "customerId": 2,
        "firstName": "Neeraj",
@@ -44,7 +44,7 @@ Endpoints:
        "gender":"male",
        "work":"Sapient Mns"
        }
-       ```
+       
 
 *PUT:*
 
