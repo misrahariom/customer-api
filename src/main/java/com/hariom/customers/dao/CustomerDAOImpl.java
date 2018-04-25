@@ -129,7 +129,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 	@Override
 	public List<Customer> getCustomersByEmail(String email) {
-		List<Customer> resultList = mongoTemplate.find(Query.query(Criteria.where("email").is(Integer.valueOf(email))),
+		List<Customer> resultList = mongoTemplate.find(Query.query(Criteria.where("email").is(email)),
 				Customer.class, CUSTOMERS_COLL);
 		return resultList;
 	}
