@@ -13,5 +13,6 @@ services:
   container_name: customers-mongo
   ports:
    - 27017:27017
-  volumes:
-   - ./data/db:/data/db
+# volumes are not working for windows for docker. Hence commenting.  Need to uncomment for linux
+#  volumes:
+#   - ./data/db:/data/db
