@@ -6,7 +6,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("org.springframework.boont:spring-boot-gradle-plugin:${springBootVersion}")
 	}
 }
 
@@ -23,12 +23,13 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile("org.springframework.boot:spring-boot-starter-actuator")
 	compile('org.springframework.boot:spring-boot-starter-data-mongodb')
 	compile('com.google.code.gson:gson:2.2.+')
+	compile('io.springfox:springfox-swagger2:2.6.1')
+	compile('io.springfox:springfox-swagger-ui:2.6.1')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
