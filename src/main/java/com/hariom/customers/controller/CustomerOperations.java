@@ -3,7 +3,10 @@
  */
 package com.hariom.customers.controller;
 
-import static org.springframework.web.bind.annotation.RequestMethod.*;
+import static org.springframework.web.bind.annotation.RequestMethod.DELETE;
+import static org.springframework.web.bind.annotation.RequestMethod.GET;
+import static org.springframework.web.bind.annotation.RequestMethod.POST;
+import static org.springframework.web.bind.annotation.RequestMethod.PUT;
 
 import java.util.List;
 
@@ -18,6 +21,8 @@ import com.hariom.customers.dao.CustomerDAO;
 import com.hariom.customers.dao.CustomerDAOImpl;
 import com.hariom.customers.model.Customer;
 
+import io.swagger.annotations.Api;
+
 /**
  * @author harmisra
  *
@@ -25,6 +30,7 @@ import com.hariom.customers.model.Customer;
 
 @Controller
 @RequestMapping("/customers")
+@Api(value="onlinecustomermgmt", description="Operations pertaining to customer management") 
 public class CustomerOperations {
 	
 	@ResponseBody
