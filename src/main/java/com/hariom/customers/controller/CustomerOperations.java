@@ -49,7 +49,7 @@ public class CustomerOperations {
 	
 	@ResponseBody
 	@RequestMapping(value = "/test", method = GET, produces = "application/json")
-	public String getTest() {;
+	public String getTest() {
 			return "{\"status\":\"this is test\"}";
 	}
 	
