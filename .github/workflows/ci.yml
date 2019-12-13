@@ -13,6 +13,26 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: Secret Scan
+      uses: max/secret-scan@1.0.0
+    - name: Spellcheck Action
+      uses: rojopolis/spellcheck-github-actions@0.2.0
+    - name: sonar-scanner
+      uses: Warchant/setup-sonar-scanner@v1
+      with:
+        # Sonar-scanner version
+        version: 4.2.0.1873
+    - name: Coverage check
+      uses: devmasx/coverage-check-action@v1.1.0
+      with:
+        # lcov | simplecov
+        type: lcov
+        # Github token for create checks
+        token: ${{secrets.GITHUB_TOKEN}}
+        # Minimum coverage
+        min_coverage: 80
+        # Json with coverage result
+        result_path: /
     - name: Make gradlew executable
       run: chmod +x ./gradlew
     - name: Build with Gradle
